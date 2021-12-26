@@ -1,0 +1,51 @@
+<div class="users-show">
+    <div class="container">
+        <div class="show-item">
+                <div class="item-left">
+                    <img src="<%= "/user_images/#{@user.user_image}" %>">
+                </div>
+                <div class="item-right">
+                    <div class="user-name">
+                        <%= @user.name %>
+                    </div>
+                </div>
+                <div class="created-at">
+                        <p>ユーザー登録日</p>
+                        <%= @user.created_at %>
+                </div>
+                <div class="edit-destroy">
+                <% if @user.id == @current_user.id %>
+                    <%= link_to("編集", "/users/#{@user.id}/edit") %>
+                    <%= link_to("削除", "/users/#{@user.id}/destroy", {method: "post"}) %>
+                <% end %>
+                </div>
+                <div class="clear"></div> <!-- floatの解消 -->
+        </div>
+
+        <div class="switch-page">
+            <%= link_to("/users/#{@user.id}") do %>
+            <p class="my-post post">投稿</p>
+            <% end %>
+            <%= link_to("/users/#{@user.id}/likes") do %>
+            <p class="post">いいね!した投稿</p>
+            <% end %>
+        </div>
+        
+        
+        <% @user.posts.each do |post| %> <!-- ユーザーの投稿一覧-->
+        <div class="index-item">
+            <div class="item-left">
+                <img src="<%= "/user_images/#{post.user.user_image}" %>">
+            </div>
+            <div class="item-right">
+                <%= link_to("/users/#{post.user.id}") do %>
+                <p class="post-name"><%= post.user.name %></p>
+                <% end %>
+                <%= link_to("/posts/#{post.id}") do %>
+                <p class="post-content"><%= post.content %></p>
+                <% end %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>

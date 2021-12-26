@@ -1,0 +1,168 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+    box-sizing: border-box;
+}
+ 
+ul, li {
+    list-style-type: none;
+    margin: 0;
+}
+ 
+body {
+    background-color: rgba(246, 246, 246, 1);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+h1, h2, h3, h4, h5, h6, p, a {
+    margin: 0;
+    text-decoration: none;
+}
+
+
+
+/* 共通レイアウト */ 
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 60px auto;
+}
+
+h2 {
+    /* section-headline*/
+    font-size: 60px;
+    color: rgba(196, 196, 196, 1);
+    font-weight: normal;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.form-box {
+    background-color: white;
+    padding: 30px;
+}
+
+.btn {
+    cursor: pointer;
+    width: 100px;
+    height: 44px;
+    background-color: rgba(89, 231, 231, 1);
+    float: right;
+    color: azure;
+    border: white;
+}
+
+img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* header */ 
+header {
+    height: 70px;
+    background-color:rgba(89, 231, 231, 1);
+    line-height: 70px;
+    
+    a {
+        color: azure;
+    }
+
+    .header-logo {
+        float: left;
+        margin-left: 15px;
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+
+    .header-list {
+        float: right;
+        
+
+        li {
+            float: left;
+            line-height: 70px;
+            margin-right: 20px;
+
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+
+}
+
+/* top page */
+.top {
+    text-align: center;
+    padding: 200px 100px;
+
+    h1 {
+        font-size: 70px;
+    }
+
+    p {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+}
+
+
+/* about page */
+.about {
+    margin-left: 60px;
+    padding-top: 150px;
+
+    h2 {
+        font-size: 72px;
+        margin-bottom: 15px;
+        color: black;
+    }
+
+    p {
+        font-size: 26px;
+    }
+}
+
+
+/* error message */
+.error-message {
+    color: brown;
+    font-size: 16px;
+}
+
+
+/* flash */
+.flash {
+    background-color: burlywood;
+    color: azure;
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* like btn*/
+.unlike-btn {
+    color: darkorchid;
+}
+
+.like-btn {
+    color: dimgray;
+}

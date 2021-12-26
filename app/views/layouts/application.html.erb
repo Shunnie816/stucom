@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StuCom</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <% if not session[:user_id] %>
+      <!--ログインしていないときのheader -->
+      <div class="header-logo">
+        <%= link_to("/") do %>
+        <h1>StuCom</h1>
+        <% end %>
+      </div>
+        <ul class="header-list">
+          <li>
+            <%= link_to("/about") do %>
+            <p>StuComとは</p>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/register") do %>
+            <p>新規登録</p>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/login") do %>
+            <p>ログイン</p>
+            <% end %>
+          </li>
+        </ul>
+     <% else %>
+     <!--ログイン中のheader -->
+      <div class="header-logo">
+        <%= link_to("/posts/index") do %>
+        <h1>StuCom</h1>
+        <% end %>
+      </div>
+      <ul class="header-list">
+          <li>
+            <%= link_to("/users/#{@current_user.id}") do %>
+            <p><%= @current_user.name %></p>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/posts/index") do %>
+            <p>投稿一覧</p>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/posts/new") do %>
+            <p>新規投稿</p>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/users/index") do %>
+            <p>ユーザー一覧</p>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/logout", {method: "post"}) do %>
+            <p>ログアウト</p>
+            <% end %>
+          </li>
+        </ul>
+      <% end %> 
+    </header>
+    <% if flash[:notice]%>
+    <div class="flash">
+    <%= flash[:notice] %>
+    </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

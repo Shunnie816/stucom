@@ -1,0 +1,73 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/* users/new, login_form */
+
+
+.register-form {
+    width: 100%;
+    padding: 2px 1px;
+    margin-bottom: 10px;
+    height: 35px;
+}
+
+
+/* users/show */
+
+.show-item {
+    vertical-align: middle;
+    background-color: white;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+    .user-name {
+        font-size: 24px;
+        line-height: 55px;
+    }
+
+    .created-at {
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+
+.switch-page {
+    height: 30px;
+    background-color: white;
+    padding: 10px 2px;
+    width: 100%;
+    
+    p {
+        color: silver;
+    }
+
+    .post {
+        float: left;
+        margin-right: 10px;
+    }
+    
+    .my-post{
+        border-bottom: solid 1px steelblue;
+        color:black;
+    }
+
+    .like-post {
+        border-bottom: solid 1px steelblue;
+        color:black;
+    }
+}
+
+.post-name {
+    font-size: 14px;
+    color: black;
+}
+
+.post-content {
+    color: black;
+}

@@ -1,0 +1,22 @@
+<div class="register">
+    <div class="container">
+    <h2>新規登録</h2>
+        <div class="form-box">
+        <%= form_tag("/register", {multipart: true}) do %>
+            <% @user.errors.full_messages.each do |message| %>
+            <div class="error-message">
+            <%= message %>
+            </div>
+            <% end %>
+            <p>ユーザー名</p>
+            <input class="register-form" name="name" value="<%= @user.name %>">
+            <p>メールアドレス</p>
+            <input class="register-form" name="email" value="<%= @user.email %>">
+            <p>パスワード</p>
+            <input class="register-form" type="password" name="password" value="<%= @user.password %>">
+            <input class="btn" type="submit" value="ユーザー登録">
+            <div class="clear"></div>
+        <% end %>
+        </div>
+    </div>
+</div>

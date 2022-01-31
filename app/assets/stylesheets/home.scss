@@ -76,6 +76,7 @@ header {
     height: 70px;
     background-color:rgba(89, 231, 231, 1);
     line-height: 70px;
+    width: 100%;
     
     a {
         color: azure;
@@ -125,8 +126,7 @@ header {
 
 /* about page */
 .about {
-    margin-left: 60px;
-    padding-top: 150px;
+    margin: 150px 60px;
 
     h2 {
         font-size: 72px;

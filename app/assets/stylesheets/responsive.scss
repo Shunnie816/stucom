@@ -1,6 +1,6 @@
 
 /* タブレット表示時*/
-@media (max-width: 1180px ) {
+@media all and (max-width: 1180px ) {
 
     /* top page*/
     .top {
@@ -50,7 +50,7 @@
 
 
 /* スマホ表示時*/
-@media (max-width: 599px ) {
+@media all and (max-width: 599px ) {
     
     /* header */
     .header-logo {
@@ -60,7 +60,23 @@
     .header-list {
         display: none;
     }
+
+    .menu-icon {
+
+        display: block!important;
+
+        .fa-bars {
+            float: right;
+            color:azure;
+            font-size: 36px;
+            line-height: 70px;
+            margin-right: 20px;
+            padding: 0 5px 0 5px;
+        }
+    }
+
     
+
     .top {
 
         padding: 40px 20px;

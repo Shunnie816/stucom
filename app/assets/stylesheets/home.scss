@@ -4,6 +4,7 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
  
 ul, li {
@@ -18,7 +19,6 @@ body {
 }
  
 h1, h2, h3, h4, h5, h6, p, a {
-    margin: 0;
     text-decoration: none;
 }
 
@@ -109,6 +109,11 @@ header {
         display: none;
     } 
 
+}
+
+/* footer */
+footer {
+    display: none;
 }
 
 /* top page */

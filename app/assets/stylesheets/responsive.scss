@@ -58,14 +58,13 @@
     }
 
     .header-list {
-        display: none;
         float: none;
 
         li {
             float: none!important;
 
-            .header-side {
-                display: block!important;
+            .none {
+                display: none;
             }
             
             p {

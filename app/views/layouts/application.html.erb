@@ -21,17 +21,17 @@
         <% end %>
       </div>
         <ul class="header-list">
-          <li>
+          <li class="none">
             <%= link_to("/about") do %>
             <p>StuComとは</p>
             <% end %>
           </li>
-          <li class="header-side">
+          <li>
             <%= link_to("/register") do %>
             <p>新規登録</p>
             <% end %>
           </li>
-          <li class="header-side">
+          <li>
             <%= link_to("/login") do %>
             <p>ログイン</p>
             <% end %>
@@ -45,27 +45,27 @@
         <% end %>
       </div>
       <ul class="header-list">
-          <li class="header-side">
+          <li>
             <%= link_to("/users/#{@current_user.id}") do %>
             <p><%= @current_user.name %></p>
             <% end %>
           </li>
-          <li>
+          <li class="none">
             <%= link_to("/posts/index") do %>
             <p>投稿一覧</p>
             <% end %>
           </li>
-          <li>
+          <li class="none">
             <%= link_to("/posts/new") do %>
             <p>新規投稿</p>
             <% end %>
           </li>
-          <li>
+          <li class="none">
             <%= link_to("/users/index") do %>
             <p>ユーザー一覧</p>
             <% end %>
           </li>
-          <li class="header-side">
+          <li>
             <%= link_to("/logout", {method: "post"}) do %>
             <p>ログアウト</p>
             <% end %>

@@ -59,16 +59,10 @@
 
     .header-list {
 
-        li {
-            .none {
-                display: none;
-            }
-            
-            p {
-                color: black;
-            }
-                
+        .none {
+            display: none!important;
         }
+
     } 
 
     .menu-icon {

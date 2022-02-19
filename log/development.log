@@ -42242,3 +42242,76 @@ ActionView::Template::Error (undefined method `id' for nil:NilClass):
     52:           </li>
   
 app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__395200678_732318354760'
+Started GET "/" for ::1 at 2022-02-19 09:00:41 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 982ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    46:       </div>
+    47:       <ul class="header-list">
+    48:           <li>
+    49:             <%= link_to("/users/#{@current_user.id}") do %>
+    50:             <p><%= @current_user.name %></p>
+    51:             <% end %>
+    52:           </li>
+  
+app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__596049705_1412234873100'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2022-02-19 09:01:09 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    46:       </div>
+    47:       <ul class="header-list">
+    48:           <li>
+    49:             <%= link_to("/users/#{@current_user.id}") do %>
+    50:             <p><%= @current_user.name %></p>
+    51:             <% end %>
+    52:           </li>
+  
+app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__596049705_1412246358060'
+Started GET "/" for ::1 at 2022-02-19 09:08:29 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    46:       </div>
+    47:       <ul class="header-list">
+    48:           <li class="header-side">
+    49:             <%= link_to("/users/#{@current_user.id}") do %>
+    50:             <p><%= @current_user.name %></p>
+    51:             <% end %>
+    52:           </li>
+  
+app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__596049705_1412260586460'
+Started POST "/__web_console/repl_sessions/a0927869afb307a2bb4967cb219b9ad0/trace" for ::1 at 2022-02-19 09:08:38 +0900

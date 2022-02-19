@@ -26,12 +26,12 @@
             <p>StuComとは</p>
             <% end %>
           </li>
-          <li>
+          <li class="header-side">
             <%= link_to("/register") do %>
             <p>新規登録</p>
             <% end %>
           </li>
-          <li>
+          <li class="header-side">
             <%= link_to("/login") do %>
             <p>ログイン</p>
             <% end %>
@@ -45,7 +45,7 @@
         <% end %>
       </div>
       <ul class="header-list">
-          <li>
+          <li class="header-side">
             <%= link_to("/users/#{@current_user.id}") do %>
             <p><%= @current_user.name %></p>
             <% end %>
@@ -65,7 +65,7 @@
             <p>ユーザー一覧</p>
             <% end %>
           </li>
-          <li>
+          <li class="header-side">
             <%= link_to("/logout", {method: "post"}) do %>
             <p>ログアウト</p>
             <% end %>
@@ -100,12 +100,12 @@
             <p>StuComとは</p>
             <% end %>
           </li>
-          <li>
+          <li class="header-only">
             <%= link_to("/register") do %>
             <p>新規登録</p>
             <% end %>
           </li>
-          <li>
+          <li class="header-only">
             <%= link_to("/login") do %>
             <p>ログイン</p>
             <% end %>
@@ -118,7 +118,7 @@
         <% end %>
       </div>
       <ul class="footer-list">
-          <li>
+          <li class="header-only">
             <%= link_to("/users/#{@current_user.id}") do %>
             <p><%= @current_user.name %></p>
             <% end %>
@@ -138,7 +138,7 @@
             <p>ユーザー一覧</p>
             <% end %>
           </li>
-          <li>
+          <li class="header-only">
             <%= link_to("/logout", {method: "post"}) do %>
             <p>ログアウト</p>
             <% end %>

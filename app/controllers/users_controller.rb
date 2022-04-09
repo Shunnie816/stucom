@@ -63,7 +63,8 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find_by(id: params[:id])
     if @user.destroy
-      session[:user_id] = nil 
+      @user.delete_all_posts
+      session[:user_id] = nil
       flash[:notice] = "ユーザーを削除しました"
       redirect_to("/login")
     end

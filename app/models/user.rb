@@ -8,5 +8,12 @@ class User < ApplicationRecord
     def posts
         return Post.where(user_id: self.id)
     end
+
+    def delete_all_posts
+        posts = Post.where(user_id: self.id)
+        posts.each do |post|
+            post.destroy
+        end 
+    end
     
 end

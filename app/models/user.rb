@@ -15,5 +15,13 @@ class User < ApplicationRecord
             post.destroy
         end 
     end
-    
+
+   def delete_liked_posts
+       posts = Post.where(user_id: self.id)
+       likes = Like.where(post_id: posts.ids)
+       likes.each do |like|
+            like.destroy
+       end
+   end
+
 end

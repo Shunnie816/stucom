@@ -31,21 +31,36 @@
             <% end %>
         </div>
 
+        
         <% @likes.each do |like| %> <!-- ユーザーがlikeした投稿-->
-        <% post = Post.find_by(id: like.post_id)%>
-        <div class="index-item">
-            <div class="item-left">
-                <img src="<%= "/user_images/#{post.user.user_image}" %>">
+            <% post = Post.find_by(id: like.post_id)%>
+            <% if post != nil %> 
+            <div class="index-item">
+                <div class="item-left">
+                    <img src="<%= "/user_images/#{post.user.user_image}" %>">
+                </div>
+                <div class="item-right">
+                    <%= link_to("/users/#{post.user.id}") do %>
+                    <p class="post-name"><%= post.user.name %></p>
+                    <% end %>
+                    <%= link_to("/posts/#{post.id}") do  %>
+                    <p class="post-content"><%= post.content %></p>
+                    <% end %>
+                </div>
             </div>
-            <div class="item-right">
-                <%= link_to("/users/#{post.user.id}") do %>
-                <p class="post-name"><%= post.user.name %></p>
-                <% end %>
-                <%= link_to("/posts/#{post.id}") do  %>
-                <p class="post-content"><%= post.content %></p>
-                <% end %>
+            <% else %>
+            <div class="index-item">
+                <div class="item-left">
+                    <img src="#">
+                </div>
+                <div class="item-right">
+                    <p class="post-name">ユーザーは既に削除されています</p>    
+                    <p class="post-content">投稿はありません</p>
+                </div>
             </div>
-        </div>
+            <% end %>
         <% end %>
+        
+        
     </div>
 </div>
